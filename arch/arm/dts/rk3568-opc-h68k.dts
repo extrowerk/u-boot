@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+#include "rk3568-evb.dts"
+
+/ {
+	model = "HINLINK OPC-H68K Board";
+	compatible = "hinlink,opc-h68k", "rockchip,rk3568";
+};
+
+&usb2phy0_host {
+	phy-supply = <&vcc5v0_usb_otg>;
+};
+
+&usb2phy1_host {
+	phy-supply = <&vcc5v0_usb_otg>;
+};
+
+&usb2phy1_otg {
+	phy-supply = <&vcc5v0_usb_otg>;
+};
+
+&vcc5v0_usb_host {
+	status = "disabled";
+};
